@@ -1,0 +1,383 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{11566A62-23D1-4C1E-AE4D-52BEDE331042}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Education_Control_System</RootNamespace>
+    <AssemblyName>Education_Control_System</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Emgu.CV.UI">
+      <HintPath>..\..\..\..\..\..\..\Emgu\emgucv-windesktop 3.2.0.2682\bin\Emgu.CV.UI.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Word, Version=15.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+      <HintPath>..\packages\Microsoft.Office.Interop.Word.15.0.4797.1003\lib\net20\Microsoft.Office.Interop.Word.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="MySql.Data, Version=6.9.9.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Transitions, Version=1.2.1.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\dot-net-transitions.1.2.1.0\lib\net40-full\Transitions.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="LoginPanel\GPUCalculatorTaskWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginPanel\GPUCalculatorTaskWindow.Designer.cs">
+      <DependentUpon>GPUCalculatorTaskWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPanel\pnlLoginMainForm.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginPanel\pnlLoginMainForm.Designer.cs">
+      <DependentUpon>pnlLoginMainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LoginPanel\pnlSilderLogin.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="LoginPanel\pnlSilderLogin.Designer.cs">
+      <DependentUpon>pnlSilderLogin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MainForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainForm.Designer.cs">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StartUpForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="StartUpForm.Designer.cs">
+      <DependentUpon>StartUpForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartUpPanel\PanelSlider1.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StartUpPanel\PanelSlider1.Designer.cs">
+      <DependentUpon>PanelSlider1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartUpPanel\pnlLearn.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StartUpPanel\pnlLearn.Designer.cs">
+      <DependentUpon>pnlLearn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartUpPanel\pnlLecturer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StartUpPanel\pnlLecturer.Designer.cs">
+      <DependentUpon>pnlLecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="StartUpPanel\pnlStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StartUpPanel\pnlStaff.Designer.cs">
+      <DependentUpon>pnlStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserIDLogIn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="UserIDLogIn.Designer.cs">
+      <DependentUpon>UserIDLogIn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanels\cashierPayment.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\cashierPayment.Designer.cs">
+      <DependentUpon>cashierPayment.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanels\LecCheckSchTaskWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\LecCheckSchTaskWindow.Designer.cs">
+      <DependentUpon>LecCheckSchTaskWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanels\LecturerRegistration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\LecturerRegistration.Designer.cs">
+      <DependentUpon>LecturerRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanels\managerReports.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\managerReports.Designer.cs">
+      <DependentUpon>managerReports.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanels\RegitrationPanel.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\RegitrationPanel.Designer.cs">
+      <DependentUpon>RegitrationPanel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanels\scheduleDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\scheduleDetails.Designer.cs">
+      <DependentUpon>scheduleDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanels\StaffRegistration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\StaffRegistration.Designer.cs">
+      <DependentUpon>StaffRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanels\StudentRegistration.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\StudentRegistration.Designer.cs">
+      <DependentUpon>StudentRegistration.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanels\studentReview.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\studentReview.Designer.cs">
+      <DependentUpon>studentReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanels\TutorSeeker.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\TutorSeeker.Designer.cs">
+      <DependentUpon>TutorSeeker.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanels\UploadScheduleTaskWindow.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\UploadScheduleTaskWindow.Designer.cs">
+      <DependentUpon>UploadScheduleTaskWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanels\userPanelDean.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\userPanelDean.Designer.cs">
+      <DependentUpon>userPanelDean.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanels\userPanelLecturer.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\userPanelLecturer.Designer.cs">
+      <DependentUpon>userPanelLecturer.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanels\userPanelSlider.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\userPanelSlider.Designer.cs">
+      <DependentUpon>userPanelSlider.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanels\userPanelSliderNormal.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\userPanelSliderNormal.Designer.cs">
+      <DependentUpon>userPanelSliderNormal.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanels\userPanelStaff.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\userPanelStaff.Designer.cs">
+      <DependentUpon>userPanelStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanels\userPanelStudent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\userPanelStudent.Designer.cs">
+      <DependentUpon>userPanelStudent.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UserPanels\viewDetails.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UserPanels\viewDetails.Designer.cs">
+      <DependentUpon>viewDetails.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="LoginPanel\GPUCalculatorTaskWindow.resx">
+      <DependentUpon>GPUCalculatorTaskWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPanel\pnlLoginMainForm.resx">
+      <DependentUpon>pnlLoginMainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LoginPanel\pnlSilderLogin.resx">
+      <DependentUpon>pnlSilderLogin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainForm.resx">
+      <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="StartUpForm.resx">
+      <DependentUpon>StartUpForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartUpPanel\PanelSlider1.resx">
+      <DependentUpon>PanelSlider1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartUpPanel\pnlLearn.resx">
+      <DependentUpon>pnlLearn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartUpPanel\pnlLecturer.resx">
+      <DependentUpon>pnlLecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="StartUpPanel\pnlStaff.resx">
+      <DependentUpon>pnlStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserIDLogIn.resx">
+      <DependentUpon>UserIDLogIn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\cashierPayment.resx">
+      <DependentUpon>cashierPayment.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\LecCheckSchTaskWindow.resx">
+      <DependentUpon>LecCheckSchTaskWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\LecturerRegistration.resx">
+      <DependentUpon>LecturerRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\managerReports.resx">
+      <DependentUpon>managerReports.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\RegitrationPanel.resx">
+      <DependentUpon>RegitrationPanel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\scheduleDetails.resx">
+      <DependentUpon>scheduleDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\StaffRegistration.resx">
+      <DependentUpon>StaffRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\StudentRegistration.resx">
+      <DependentUpon>StudentRegistration.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\studentReview.resx">
+      <DependentUpon>studentReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\TutorSeeker.resx">
+      <DependentUpon>TutorSeeker.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\UploadScheduleTaskWindow.resx">
+      <DependentUpon>UploadScheduleTaskWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\userPanelDean.resx">
+      <DependentUpon>userPanelDean.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\userPanelLecturer.resx">
+      <DependentUpon>userPanelLecturer.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\userPanelSlider.resx">
+      <DependentUpon>userPanelSlider.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\userPanelSliderNormal.resx">
+      <DependentUpon>userPanelSliderNormal.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\userPanelStaff.resx">
+      <DependentUpon>userPanelStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\userPanelStudent.resx">
+      <DependentUpon>userPanelStudent.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UserPanels\viewDetails.resx">
+      <DependentUpon>viewDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="ClassDiagram1.cd" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Files\Status.txt" />
+    <None Include="Resources\if_Student-3_379383.png" />
+    <None Include="Resources\if_left_1348641.png" />
+    <None Include="Resources\if_mailbox_103624.png" />
+    <None Include="Resources\if_Application_46710.png" />
+    <None Include="Resources\if_Man-14_379444.png" />
+    <None Include="Resources\if_Man-9-_379446.png" />
+    <None Include="Resources\if_ChronologicalReview_46712.png" />
+    <None Include="Resources\if_ParameterReview_46717.png" />
+    <None Include="Resources\if_icons_exit_1564505.png" />
+    <Content Include="Resources\if_settings_115801.png">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <None Include="Resources\if_settings_1158011.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Schedule\ExistingSchedule\" />
+    <Folder Include="Schedule\Template\" />
+    <Folder Include="Schedule\UploadReady\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
