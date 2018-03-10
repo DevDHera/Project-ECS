@@ -5,7 +5,7 @@ A .NET based Education Control System that is capable of providing solutions for
 
 Following are the user roles present.
 
-1.Student
+1.Students
 2.Lectures
 3.Staff
 4.Cashier
